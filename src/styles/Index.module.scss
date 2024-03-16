@@ -1,0 +1,121 @@
+label.id {
+    padding: 5px;
+    border: 0;
+    margin: 5px;
+    min-width: 35px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+div.center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div.account {
+    cursor: pointer;
+    margin: 10px;
+    width: 220px;
+    height: 80px;
+    transition-duration: 0.2s;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #333;
+    border-radius: 10px;
+
+    &:hover {
+        background-color: #2d2d2d;
+    }
+
+    div.left {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    div.right {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+
+        > p#username {
+            color: #fff;
+        }
+
+        > p#id {
+            color: #888;
+            font-size: 13px;
+        }
+    }
+}
+
+div.accounts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div.program {
+    cursor: pointer;
+    margin: 10px;
+    width: 300px;
+    height: 100px;
+    transition-duration: 0.2s;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    border-radius: 10px;
+
+    &:hover {
+        background-color: #2d2d2d;
+    }
+
+    div.texts {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+
+        > div {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+
+            > img {
+                width: 20px;
+                height: 20px;
+                margin: 5px;
+            }
+        }
+
+        > p {
+            font-size: 14px;
+        }
+    }
+}

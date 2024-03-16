@@ -1,0 +1,87 @@
+@import url(https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Latin/MiSansLatin-Medium.min.css);
+
+* {
+    user-select: none;
+}
+
+body {
+    border: 0;
+    margin: 0;
+    background-color: #232323;
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
+p {
+    color: white;
+    font-family: MiSansLatin, Arial, sans-serif;
+    margin: 5px;
+    text-align: center;
+
+    &.subtitle {
+        font-size: 20px;
+    }
+}
+
+div#topbar {
+    $height: 60px;
+    z-index: 1000;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: $height;
+    backdrop-filter: blur(15px);
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        color: white;
+        text-decoration: none;
+
+        > img {
+            width: $height/2;
+        }
+    }
+
+    > div#line {
+        transition-duration: 0.3s;
+        position: absolute;
+        margin-top: $height;
+        border: 0.2px #444 solid;
+        width: 80%;
+    }
+}
+
+div#middleText {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 60px);
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        font-size: 150px;
+    }
+}
+
+div#bottombar {
+    padding: 15px;
+    margin-top: 30px;
+    background-color: #181818;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+
+    > p#copyright {
+        font-size: 13px;
+    }
+}
