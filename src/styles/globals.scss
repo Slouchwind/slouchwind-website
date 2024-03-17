@@ -25,6 +25,22 @@ p {
     }
 }
 
+a {
+    transition-duration: 0.2s;
+    color: #8fd0f8;
+    text-decoration: none;
+    -webkit-user-drag: none;
+
+    &:hover {
+        background-color: #333;
+    }
+
+    &:active {
+        color: #56beff;
+        background-color: #2a2a2a;
+    }
+}
+
 div#topbar {
     $height: 60px;
     z-index: 1000;

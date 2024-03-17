@@ -40,7 +40,7 @@ function AccountLabels({ datas }: { datas: AccountLabelProps[] }) {
 }
 
 interface ProgramLabelProps {
-    icon: string;
+    icon?: string;
     name: string;
     bro: string;
     link: string;
@@ -52,7 +52,7 @@ function ProgramLabel({ icon, name, bro, link, ban }: ProgramLabelProps) {
         <div className={style.program} onClick={() => window.open(link, '_blank')} title={ban ? '暂时搁置' : ''}>
             <div className={style.texts}>
                 <div className={style.title}>
-                    <img src={icon} />
+                    {icon && <img src={icon} />}
                     <p>{name}</p>
                 </div>
                 <p>{bro}</p>
@@ -82,9 +82,9 @@ export default function Index() {
                     <Labels texts={['INFP', '二次元', '编程', '高中牲']} />
                 </div>
                 <p>简短介绍一下我只及：</p>
-                <p>二次元 {'->'} 京阿尼、Key社(但是不全)</p>
-                <p>编程 {'->'} 会拼写 JavaScript / TypeScript / Python / Rust / Golang</p>
-                <p>高中牲 {'->'} 偏理，但不是若只理科生</p>
+                <p>二次元 → 京阿尼(看我的 <a href='https://bgm.tv/user/slouchwind'>Bangumi</a>)</p>
+                <p>编程 → 会拼写 JavaScript / TypeScript / Python / Rust / Golang</p>
+                <p>高中牲 → 偏理，但不是若只理科生</p>
             </div>
             <br />
             <AccountLabels
@@ -104,6 +104,12 @@ export default function Index() {
                         icon: 'https://www.bilibili.com/favicon.ico',
                         username: 'Slouchwind春鹄',
                         link: 'https://space.bilibili.com/625209631',
+                    },
+                    {
+                        icon: 'https://bgm.tv/img/favicon.ico',
+                        username: 'Slouchwind',
+                        id: 'slouchwind',
+                        link: 'https://bgm.tv/user/slouchwind',
                     },
                 ]}
             />
@@ -126,6 +132,11 @@ export default function Index() {
                         bro: '分享与欣赏诗词',
                         link: 'https://qixie.vercel.app/',
                         ban: true,
+                    },
+                    {
+                        name: 'typescript-ann',
+                        bro: '休闲时写下来的ANN',
+                        link: 'https://github.com/Slouchwind/typescript-ann',
                     },
                 ]}
             />
