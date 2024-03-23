@@ -67,14 +67,6 @@ div.account {
     }
 }
 
-div.accounts {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
 div.program {
     cursor: pointer;
     margin: 10px;
@@ -117,5 +109,27 @@ div.program {
         > p {
             font-size: 14px;
         }
+    }
+}
+
+div.group {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div.imageGroup {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    > img {
+        margin: 10px;
     }
 }

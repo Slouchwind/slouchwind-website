@@ -31,7 +31,7 @@ function AccountLabel({ icon, username, id, link }: AccountLabelProps) {
 
 function AccountLabels({ datas }: { datas: AccountLabelProps[] }) {
     return (
-        <div className={style.accounts}>
+        <div className={style.group}>
             {datas.map((data, i) => (
                 <AccountLabel {...data} key={i} />
             ))}
@@ -63,7 +63,7 @@ function ProgramLabel({ icon, name, bro, link, ban }: ProgramLabelProps) {
 
 function ProgramLabels({ datas }: { datas: ProgramLabelProps[] }) {
     return (
-        <div className={style.accounts}>
+        <div className={style.group}>
             {datas.map((data, i) => (
                 <ProgramLabel {...data} key={i} />
             ))}
@@ -116,7 +116,7 @@ export default function Index() {
             <br />
             <div>
                 <p className='subtitle'>项目</p>
-                <p>以下是我做过的项目</p>
+                <p>以下是我做过的有用的项目</p>
             </div>
             <ProgramLabels
                 datas={[
@@ -129,17 +129,33 @@ export default function Index() {
                     {
                         icon: 'https://qixie.vercel.app/ico.svg',
                         name: '齐谐者 QiXiE',
-                        bro: '分享与欣赏诗词',
+                        bro: '一个致力于诗歌分享的网站',
                         link: 'https://qixie.vercel.app/',
                         ban: true,
                     },
                     {
                         name: 'typescript-ann',
-                        bro: '休闲时写下来的ANN',
+                        bro: '初见 ANN 后写下来的',
                         link: 'https://github.com/Slouchwind/typescript-ann',
+                    },
+                    {
+                        name: 'MinusCode',
+                        bro: '基于一种减法分离一段数字的加密方法',
+                        link: 'https://github.com/Slouchwind/MinusCode',
+                    },
+                    {
+                        name: 'something-useless',
+                        bro: '11 种编程语言的 Hello World',
+                        link: 'https://github.com/Slouchwind/something-useless',
                     },
                 ]}
             />
+            <br />
+            <p className='subtitle'>状态</p>
+            <div className={style.imageGroup}>
+                <img src='https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=Slouchwind&theme=dark' />
+                <img src='https://github-readme-stats.vercel.app/api/top-langs/?username=Slouchwind&size_weight=0.2&count_weight=0.8&hide=html&layout=compact&langs_count=8&theme=dark' />
+            </div>
         </Main>
     );
 }
