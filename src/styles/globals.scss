@@ -2,6 +2,7 @@
 
 * {
     user-select: none;
+    -webkit-user-drag: none;
 }
 
 body {
@@ -29,7 +30,6 @@ a {
     transition-duration: 0.2s;
     color: #8fd0f8;
     text-decoration: none;
-    -webkit-user-drag: none;
 
     &:hover {
         background-color: #333;
@@ -48,15 +48,21 @@ div#topbar {
     position: fixed;
     width: 100%;
     height: $height;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(10px);
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
 
     a {
+        margin: 0 15px;
         color: white;
         text-decoration: none;
+        background-color: #0000;
+
+        > p {
+            font-size: 13px;
+        }
 
         > img {
             width: $height/2;
@@ -75,7 +81,7 @@ div#topbar {
 div#middleText {
     display: flex;
     width: 100%;
-    height: calc(100% - 60px);
+    height: 100vh;
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
@@ -87,6 +93,7 @@ div#middleText {
 }
 
 div#bottombar {
+    width: 100%;
     padding: 15px;
     margin-top: 30px;
     background-color: #181818;

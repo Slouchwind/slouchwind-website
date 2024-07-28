@@ -1,0 +1,29 @@
+div.picture {
+    width: 250px;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+
+    > img {
+        width: 250px;
+        z-index: -1;
+    }
+
+    > div {
+        position: relative;
+        background-color: #000b;
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+
+        > p {
+            font-size: 12px;
+        }
+    }
+}
+
+div.pictures {
+    display: flex;
+}

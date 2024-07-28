@@ -1,9 +1,9 @@
-import axios from "axios";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export function TopBar() {
     return (
         <div id="topbar">
+            {/*<a href="/photo"><p>照片</p></a>*/}
             <a href="/"><img src="/icon.svg" /></a>
             <div id="line" />
         </div>
