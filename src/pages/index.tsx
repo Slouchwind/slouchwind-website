@@ -101,10 +101,13 @@ export default function Index() {
             <div>
                 <p>这里是 Slouchwind</p>
                 <p>也可以叫我春鹄</p>
+                <br />
                 <div className={style.center}>
                     <Labels texts={['INFP', '二次元', '编程', '高中牲']} />
                 </div>
+                <br />
                 <p>简短介绍一下我只及：</p>
+                <br />
                 <p>INFP → 健全小蝴蝶 / Fi,Ne / 9w8</p>
                 <p>二次元 → 京阿尼 / 废萌 / <a href='https://bgm.tv/user/slouchwind'>Bangumi</a></p>
                 <p>编程 → 会拼写 JavaScript / TypeScript / Python / Rust / Golang</p>
@@ -204,14 +207,14 @@ export default function Index() {
                         src: 'https://upload.wikimedia.org/wikipedia/zh/3/30/Pj_Sekai_app.png',
                         text: (<>
                             <p>Project SEKAI / プロセカ</p>
-                            <p>在日本旅游时想起同学玩pjsk日服，就这样接触了，被尾判劝退，吃灰中</p>
+                            <p>在日本旅游时想起同学玩 pjsk 日服，就这样接触了，被尾判劝退，吃灰中</p>
                         </>)
                     },
                     {
                         src: 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/75/ae/88/75ae88e3-7e9c-fea4-785c-a57cf4639ca4/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp',
                         text: (<>
                             <p>Muse Dash</p>
-                            <p>一次生日同学在Steam赠送给我，长期游玩中</p>
+                            <p>一次生日同学在 Steam 赠送给我，长期游玩中</p>
                         </>)
                     },
                     {

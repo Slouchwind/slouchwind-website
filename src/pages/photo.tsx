@@ -15,10 +15,13 @@ function Picture({ src, date, bio }: PictureProps) {
     let [divHeight, setDivHeight] = useState(0);
     useEffect(() => {
         setImgHeight(imgRef.current?.clientHeight || 0);
-        setDivHeight(divRef.current?.clientHeight || 0);
     }, []);
     return (
-        <div className={style.picture} style={{ height: imgHeight }}>
+        <div
+            className={style.picture} style={{ height: imgHeight }}
+            onMouseEnter={() => { setDivHeight(divRef.current?.clientHeight || 0) }}
+            onMouseLeave={() => { setDivHeight(0) }}
+        >
             <img src={src} ref={imgRef} />
             <div ref={divRef} style={{ top: -divHeight }}>
                 <p>{date}</p>
@@ -39,17 +42,34 @@ function Pictures({ data }: { data: PictureProps[] }) {
 export default function Photo() {
     return (
         <Main>
+            <br />
             <p>这里是照片墙</p>
+            <br />
             <Pictures data={[
+                {
+                    src: '/picture/HelloUbuntu.png',
+                    date: '2024/11/1',
+                    bio: 'Windows + Ubuntu 双系统'
+                },
+                {
+                    src: '/picture/主播女孩.png',
+                    date: '2024/9/16',
+                    bio: ''
+                },
+                {
+                    src: '/picture/雨.png',
+                    date: '2024/9/10',
+                    bio: '雨'
+                },
+                {
+                    src: '/picture/春游.png',
+                    date: '2024/6/14',
+                    bio: '雨天春游'
+                },
                 {
                     src: '/picture/Time.png',
                     date: '2024/3/9',
                     bio: '是光阴似箭，非来日方长',
-                },
-                {
-                    src: '/picture/MerryChristmas2023.png',
-                    date: '2023/12/24',
-                    bio: '平静的圣诞树',
                 },
             ]} />
         </Main>

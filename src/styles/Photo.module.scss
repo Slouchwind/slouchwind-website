@@ -1,17 +1,20 @@
 div.picture {
-    width: 250px;
+    $w: 500px;
+    width: $w;
     margin: 10px;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 15px;
 
     > img {
-        width: 250px;
+        width: $w;
         z-index: -1;
     }
 
     > div {
+        transition-duration: 0.4s;
+        padding: 5px;
         position: relative;
-        background-color: #000b;
+        background-color: rgb(0 0 0 / 27%);
         backdrop-filter: blur(10px);
         display: flex;
         flex-direction: column;
@@ -26,4 +29,7 @@ div.picture {
 
 div.pictures {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
